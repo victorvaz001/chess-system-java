@@ -2,6 +2,8 @@ package boardgame;
 
 public class Position {
 
+	//classe posição da matriz
+	
 	private int row;
 	private int column;
 
