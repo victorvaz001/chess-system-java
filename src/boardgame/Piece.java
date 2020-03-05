@@ -2,7 +2,7 @@ package boardgame;
 
 public class Piece {
 	
-	//classe peça de xadrez
+	//classe posição de matriz
 	
 	protected Position position;
 	private Board board;
