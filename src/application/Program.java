@@ -1,5 +1,6 @@
 package application;
 
+import java.awt.Checkbox;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -18,7 +19,8 @@ public class Program {
 		ChessMatch chessMatch = new ChessMatch();
 		List<ChessPiece> captured = new ArrayList<>();
 
-		while (true) {
+		/*Enquanto a partida não estiver em check mate*/
+		while (!chessMatch.getCheckMate()) {
 			try {
 				UI.clearScreen();
 				UI.printMatch(chessMatch, captured); /* Imprime o tabuleiro na tela */
@@ -48,6 +50,8 @@ public class Program {
 				sc.nextLine();
 			}
 		}
+		UI.clearScreen(); /*Limpa a tela*/
+		UI.printMatch(chessMatch, captured); /*Mostra a partida finalizada*/
 	}
 
 }
